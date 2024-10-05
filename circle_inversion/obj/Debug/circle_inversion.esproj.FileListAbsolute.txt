@@ -1,0 +1,2 @@
+C:\Users\owner\source\repos\Circle_Inversion\Circle_Inversion\obj\Debug\circle_inversion.esproj.CoreCompileInputs.cache
+C:\Users\owner\source\repos\CircleInversion\CircleInversion\Circle_Inversion\obj\Debug\circle_inversion.esproj.CoreCompileInputs.cache
