@@ -78,6 +78,7 @@ function App() {
     const [isCircle, setIsCircle] = useState(false);
     const [isTriangle, setIsTriangle] = useState(false);
     const [isSquare, setIsSquare] = useState(false);
+    const [squarePoints, setSquarePoints] = useState(100);
     const [innerR, setInnerR] = useState(0);
     const [innerX, setInnerX] = useState(0);
     const [innerY, setInnerY] = useState(0);
@@ -97,8 +98,6 @@ function App() {
         height="100vh"
         viewBox="-150 -100 300 200"
     >
-        <line x1={-150} y1={-110} x2={150} y2={100} stroke="blue" strokeWidth=".1" />
-        <line x1={-145} y1={100} x2={145} y2={-100} stroke="blue" strokeWidth=".1" />
         <circle cx={refCircleX} cy={refCircleY} r={refCircleR} stroke="red" strokeWidth={.5} />
         <circle cx={refCircleX} cy={refCircleY} r={.1} stroke="red" strokeWidth={.5} />
         {isCircle && <PointsCircle
@@ -118,7 +117,7 @@ function App() {
             x2={squareX + squareW / 2}
             y2={squareY + squareH / 2}
             refR={refCircleR}
-            n={1000}
+            n={squarePoints}
         />}
         {isTriangle && <PointsTriangle
             cx={refCircleX}
@@ -276,6 +275,8 @@ function App() {
                     <input type="number" value={squareX} onChange={(x) => x.target.value ? setSquareX(parseInt(x.target.value)) : 0} />
                     <label>Y: </label>
                     <input type="number" value={squareY} onChange={(y) => y.target.value ? setSquareY(parseInt(y.target.value)) : 0} />
+                    <label>Points: </label>
+                    <input type="number" value={squarePoints} onChange={(p) => setSquarePoints(parseInt(p.target.value))} />
                 </>}
                 <br />
                 <button style={styles.pointButton} onClick={() => setIsPoint(!isPoint)} >Point</button>

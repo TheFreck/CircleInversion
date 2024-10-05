@@ -6,7 +6,7 @@ export const PointsSquare = ({cx, cy, x1, x2, y1, y2, refR, n }) => {
 
     useEffect(() => {
         const positions = [];
-        for (var i = 0; i < n; i++) {
+        for (var i = 0; i <= n; i++) {
             const stepX = (x2 - x1) / n;
             const stepY = (y2 - y1) / n;
             const red = -Math.cos(i) * 155 + 50;
